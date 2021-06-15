@@ -1,0 +1,32 @@
+{% extends 'ecomdb/base.html' %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    <div>
+        <p>
+            Choose from the given links:
+            <br>
+            <a href="\logout">Logout</a>
+            <br>
+            <a href="\list">List of all products</a>
+            <br>
+            <!-- <form> 
+                Details of product with :
+                {{ form.as_p }}
+                <button type="submit" formaction="/detail/{{ form.field.cleaned_value }}">Go</button>
+            </form>
+            <br>
+            <form> 
+                Update product with :
+                {{ form.as_p }}
+                <button type="submit" formaction="/update/{{ form.field.cleaned_value }}">Go</button>
+            </form>
+            <br>
+            <form> 
+                Delete product with :
+                {{ form.as_p }}
+                <button type="submit" formaction="/delete/{{ form.field.cleaned_value }}">Go</button>
+            </form> -->
+        </p>
+    </div>
+{% endblock %}

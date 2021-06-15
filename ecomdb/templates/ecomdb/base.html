@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Training: Product Database</title>
+    </head>
+
+    <body>
+        <div id='content',, name='content'>
+            {% block authentication %}
+                {% if user.is_authenticated %}
+                    {% block content %}
+                    {% endblock %}
+                {% else %}
+                    <p>
+                        Please Login for access. Login
+                        <a href="/login">Here</a>
+                    </p>
+                {% endif %}
+            {% endblock%}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'ecomdb/base.html' %}
+
+{% block content %}
+    <h1>Update Details of product ID : {{  product.id }}</h1>
+ 
+    <div>
+        <h2>Currently stored details:</h2>
+        <p>
+            ID : {{ product.id }}<br>
+            Name : {{ product.name }}<br>
+            Price : {{ product.price }}<br>
+            Quantity : {{ product.quantity }}<br>
+        </p>
+        <br>
+        <br>
+
+        <form method ='POST' action="/update/{{  product.id }} ">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type='submit', name='update'>Update Product</button>
+        
+        </form>
+    </div>
+{% endblock %}

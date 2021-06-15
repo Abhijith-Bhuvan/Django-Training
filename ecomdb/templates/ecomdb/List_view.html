@@ -1,0 +1,26 @@
+{% extends 'ecomdb/base.html' %}
+
+{% block content %}
+    <h1>List of all products</h1>
+    <table border=1>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.id }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.quantity }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

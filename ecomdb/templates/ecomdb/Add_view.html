@@ -1,0 +1,16 @@
+{% extends 'ecomdb/base.html' %}
+
+{% block content %}
+    <h1>Add new product</h1>
+ 
+    <div>
+
+        <form method ='POST' action="/add{{  product.id }} ">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type='submit', name='update'>Add Product</button>
+        
+        </form>
+    </div>
+{% endblock %}

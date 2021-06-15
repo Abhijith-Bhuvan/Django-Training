@@ -1,0 +1,16 @@
+{% extends 'ecomdb/base.html' %}
+
+{% block content %}
+    <h1>Details of product ID : {{  product.id }}</h1>
+ 
+    <div>
+
+        <p>
+            ID : {{ product.id }}<br>
+            Name : {{ product.name }}<br>
+            Price : {{ product.price }}<br>
+            Quantity : {{ product.quantity }}<br>
+        </p>
+        
+    </div>
+{% endblock %}
